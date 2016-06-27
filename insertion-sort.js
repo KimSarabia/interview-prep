@@ -1,12 +1,28 @@
-//Unsorted Part to Sorted Part
-//Considered better than selection and bubble sort
+//In insertion sort, we divide the initial unsorted array into two parts; sorted part and unsorted part.
+//Initially the sorted part just has one element (Array of only 1 element is a sorted array). We then pick up element one by one from unsorted part;
+//insert into the sorted part at the correct position and expand sorted part one element at a time.
+
 /*
+Best Case
 O(n)
-var arr = [7,2,4,1,5,3];
+*/
 
-Insertion aort will take two arguments
-arr and number of elements in arr (n)
-We will pick up 1 until n - 1
-While hole > 0 and h
+function insertionSort(unsortedList) {
+  var len = unsortedList.length;
 
-*.
+  for(var i = 0; i < len; i++) {
+    var tmp = unsortedList[i]; //Copy of the current element.
+    /*Check through the sorted part and compare with the
+    number in tmp. If large, shift the number*/
+    for(var j = i - 1; j >= 0 && (unsortedList[j] > tmp); j--) {
+      //Shift the number
+      unsortedList[j+1] = unsortedList[j];
+    }
+    //Insert the copied number at the correct position
+    //in sorted part.
+    unsortedList[j+1] = tmp;
+  }
+}
+var ul = [5, 3, 1, 2, 4];
+insertionSort(ul);
+console.log(ul);

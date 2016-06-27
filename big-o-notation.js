@@ -3,7 +3,7 @@
   * How to talk about speed of problems
   * ALL THAT MATTERS: Size of the input string is all that matters (other things like browser, hardware, etc.)
   * Linear Complexity O(n) -> Big Oh En
-  * Logarithmic Complexity O(log(n))
+* Logarithmic Complexity O(log(n))
   * The goal is to always make it as flat as possible
 
   * @author Dave Smith, Mountain West
